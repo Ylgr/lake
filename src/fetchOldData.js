@@ -1,7 +1,7 @@
 require('dotenv').config()
 const debug = require('debug')('lake:fetch')
 
-const { IceteaWeb3 } = require('@iceteachain/web3')
+const { IceteaWeb3 } = require('@glitchdefi/web3')
 const web3 = new IceteaWeb3(process.env.RPC_URL)
 
 const handlingDataHelper = require('./helper/handlingDataHelper')
