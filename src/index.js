@@ -5,6 +5,10 @@ const fastify = require('fastify')({ logger: process.env.WEB_LOG === '1' })
 const { query, disconnect } = require('./helper/mysqlHelper')
 const factory = require('./helper/handlingDataHelper')
 
+fastify.register(require('fastify-cors'), {
+  // put your options here
+})
+
 // Declare a route
 fastify.get('/block/list', async (request, reply) => {
   let pageSize = parseInt(request.query.page_size)
