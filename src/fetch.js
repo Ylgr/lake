@@ -2,8 +2,8 @@ require('dotenv').config()
 
 const debug = require('debug')('lake:fetch')
 
-const { IceteaWeb3 } = require('@glitchdefi/web3')
-const web3 = new IceteaWeb3(process.env.RPC_URL)
+const { GlitchWeb3 } = require('@glitchdefi/web3')
+const web3 = new GlitchWeb3(process.env.RPC_URL)
 
 const mysqlHelper = require('./helper/mysqlHelper')
 const { query, disconnect } = mysqlHelper
